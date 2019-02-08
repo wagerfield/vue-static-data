@@ -1,4 +1,4 @@
-const isObject = require("isobject")
+var isObject = require("isobject")
 
 function install(Vue) {
   if (install.installed) return
@@ -6,7 +6,7 @@ function install(Vue) {
 
   Vue.mixin({
     beforeCreate: function() {
-      let staticData = this.$options.staticData
+      var staticData = this.$options.staticData
       if (typeof staticData === "function") staticData = staticData()
       if (isObject(staticData)) Object.assign(this, staticData)
     }
