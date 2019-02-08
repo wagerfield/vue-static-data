@@ -1,0 +1,29 @@
+{
+  "name": "vue-static-data",
+  "version": "0.0.0",
+  "description": "Add static data to Vue instances.",
+  "author": "Matthew Wagerfield <matthew@wagerfield.com>",
+  "homepage": "https://github.com/wagerfield/vue-static-data#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wagerfield/vue-static-data.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wagerfield/vue-static-data/issues"
+  },
+  "keywords": [
+    "vue",
+    "plugin",
+    "static",
+    "non-reactive",
+    "data"
+  ],
+  "files": [
+    "lib"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "dependencies": {
+    "isobject": "^3.0.1"
+  }
+}
