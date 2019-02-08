@@ -19,7 +19,7 @@
     "data"
   ],
   "files": [
-    "lib"
+    "index.js"
   ],
   "license": "MIT",
   "main": "lib/index.js",
