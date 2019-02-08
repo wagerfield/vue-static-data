@@ -1,6 +1,6 @@
 {
   "name": "vue-static-data",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Add static data to Vue instances.",
   "author": "Matthew Wagerfield <matthew@wagerfield.com>",
   "homepage": "https://github.com/wagerfield/vue-static-data#readme",
