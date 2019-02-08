@@ -1,6 +1,6 @@
 # Vue Static Data
 
-Add `staticData` to [Vue instances][vue-instances] and watch in awe as _it does nothing_.
+Add `staticData` to [Vue instances][vue-instances] and watch in awe as it does nothing.
 
     yarn add vue-static-data
 
