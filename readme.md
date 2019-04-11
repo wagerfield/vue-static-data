@@ -17,8 +17,8 @@ export default {
   // Object | Function
   staticData() {
     return {
-	  staticProp: "static"
-	};
+      staticProp: "static"
+    };
   },
   data: () => ({
     reactiveProp: "reactive"
