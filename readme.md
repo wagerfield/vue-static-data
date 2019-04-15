@@ -15,9 +15,11 @@ Add `staticData` to [Vue instances][vue-instances] and watch in awe as it does n
 <script>
 export default {
   // Object | Function
-  staticData: () => ({
-    staticProp: "static"
-  }),
+  staticData() {
+    return {
+      staticProp: "static"
+    };
+  },
   data: () => ({
     reactiveProp: "reactive"
   }),
