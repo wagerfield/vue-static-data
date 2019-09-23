@@ -1,8 +1,37 @@
 # Vue Static Data
 
+## Overview
+
 Add `staticData` to [Vue instances][vue-instances] and watch in awe as it does nothing.
 
-    yarn add vue-static-data
+
+## Setup
+
+Install with:
+
+```
+yarn add vue-static-data
+```
+
+Add and configure:
+
+```js
+import Vue from 'vue'
+import staticData from 'vue-static-data'
+
+Vue.use(staticData)
+```
+
+Configuration options:
+
+```js
+Vue.use(staticData, {
+  namespace: 'myData',  // a single string namespace to nest values under
+  freeze: true,         // a flag to freeze data, useful for enums
+})
+```
+
+## Usage
 
 ```vue
 <template>
