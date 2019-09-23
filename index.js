@@ -1,14 +1,41 @@
 var isObject = require("isobject")
 
-function install(Vue) {
+var defaults = {
+  namespace: null,
+  freeze: false,
+}
+
+function install(Vue, options) {
+  // run once
   if (install.installed) return
   install.installed = true
 
+  // options
+  options = Object.assign({}, defaults, options)
+
   Vue.mixin({
     beforeCreate: function() {
-      var staticData = this.$options.staticData
-      if (typeof staticData === "function") staticData = staticData()
-      if (isObject(staticData)) Object.assign(this, staticData)
+      // data
+      var data = this.$options.staticData
+      if (typeof data === "function"){
+        data = data()
+      }
+
+      if (isObject(data)) {
+        // namespace
+        var target = this
+        if (options.namespace) {
+          this[options.namespace] = {}
+          target = this[options.namespace]
+        }
+
+        // assign
+        Object.keys(data).forEach(name => {
+          target[name] = options.freeze
+            ? Object.freeze(data[name])
+            : data[name]
+        })
+      }
     }
   })
 }
